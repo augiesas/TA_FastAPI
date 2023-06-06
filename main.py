@@ -43,7 +43,7 @@ app.add_middleware(
 mydb = mysql.connector.connect(
     host="scenic-foundry-388916:us-central1:tugasakhir",
     user="root",
-    password="",
+    password="12345678",
     database="ta_160419022")
 mycursor = mydb.cursor()
 
