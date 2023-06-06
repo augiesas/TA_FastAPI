@@ -41,7 +41,7 @@ app.add_middleware(
 
 # SQL
 mydb = mysql.connector.connect(
-    host="34.28.215.232",
+    host="localhost",
     user="root",
     password="",
     database="ta_160419022")
