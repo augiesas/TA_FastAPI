@@ -41,7 +41,7 @@ app.add_middleware(
 
 # SQL
 mydb = mysql.connector.connect(
-    host="localhost",
+    host="scenic-foundry-388916:us-central1:tugasakhir",
     user="root",
     password="",
     database="ta_160419022")
