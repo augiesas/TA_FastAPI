@@ -1,15 +1,25 @@
-# Ignore compiled Python bytecode
-*.pyc
+# Ignore editor and IDE files
+.vscode/
+.idea/
 
-# Ignore virtual environment
-/venv/
+# Ignore Python virtual environment files
+venv/
+env/
 
 # Ignore log files
 *.log
 
 # Ignore database files
-*.sqlite
+*.db
 
-# Ignore sensitive configuration files
-config.ini
-secrets.txt
+# Ignore compiled Python bytecode
+__pycache__/
+
+# Ignore local development configuration files
+local_settings.py
+
+# Ignore system and temporary files
+.DS_Store
+Thumbs.db
+*.tmp
+*.swp
