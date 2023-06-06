@@ -1,0 +1,15 @@
+# Ignore compiled Python bytecode
+*.pyc
+
+# Ignore virtual environment
+/venv/
+
+# Ignore log files
+*.log
+
+# Ignore database files
+*.sqlite
+
+# Ignore sensitive configuration files
+config.ini
+secrets.txt
