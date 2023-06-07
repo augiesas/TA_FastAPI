@@ -55,21 +55,14 @@ async def predict(file: UploadFile = File()):
     # extract feature - For fruit image
     MODEL = tf.keras.models.load_model('E:/Materi Kuliah/TA/Program/Data/Model/VGG16/New/VGG16_model.h5', compile=False)
     extracted_features = MODEL.predict(image)
-
     # Reshape to 2D array
     extracted_features = np.reshape(extracted_features, (extracted_features.shape[0], -1))
-
     # Predict
     loaded_model = pickle.load(open("E:/Materi Kuliah/TA/Program/Data/Model/VGG16/New/model_VGG16_CNN_KNN_n1_CV5.sav", 'rb'))
     predictions = loaded_model.predict(extracted_features)
-
     class_labels = np.load('E:/Materi Kuliah/TA/Program/Data/fruit_label_baru.npy', allow_pickle=True)
     result = str(predictions[0])
-
-    print(result)
     nutrition_result = get_nutrition(result, file.filename)
-    # nutrition_result = get_nutrition("Mangga Manalagi", file.filename)
-
     return nutrition_result
 
 def preprocess_image(data) -> np.ndarray:
